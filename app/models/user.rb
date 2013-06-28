@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   def password
     BCrypt::Password.new(password_hash)
   end
+
+  def self.authenticate(email, )
 end
 
 # require 'bcrypt'
