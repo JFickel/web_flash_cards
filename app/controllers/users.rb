@@ -6,6 +6,10 @@ get '/users/new' do
   erb :'/users/new'
 end
 
+get '/users/:id' do |id|
+  @user=User.find(id)
+  erb :'/users/show'
+end
 
 post '/users' do
   user = User.new(email: params[:email], password: params[:password])
