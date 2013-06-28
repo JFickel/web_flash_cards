@@ -1,5 +1,9 @@
 get '/decks' do
-  erb :'decks/index'
+  if session[:user_id]
+    erb :'decks/index'
+  else
+    erb :index
+  end
 end
 
 
