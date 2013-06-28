@@ -1,3 +1,2 @@
-class Deck < ActiveRecord::Base
-  # Remember to create a migration!
+class Deck < ActiveRecord::Base  
 end
