@@ -16,7 +16,7 @@ post '/users' do
   if user.save
     session[:user_id] =  user.id
     session.delete(:signup_errors)
-    erb :'/decks/index'
+    redirect '/decks'
      #if successful
   else
     session[:signup_errors] = user.errors
