@@ -1,0 +1,7 @@
+<div class='answer'>
+	<% if guess_correct?(@guess) %>
+  <%= "Correct." %>
+  <% else %>
+  <%= "Try again." %>
+</div>
+

@@ -5,3 +5,26 @@ $(document).ready(function() {
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 });
+
+// User login
+$(document).ready(function () {
+
+	// $('#create_event').on('click',function(e){
+ // 	  e.preventDefault();
+ //    $('form.event_form').slideDown();
+ //  });
+
+  $('div.login').on('submit',function(e){
+    e.preventDefault();
+    $form = $(this)
+  
+    $.ajax({
+      url: $form.attr('action'),
+      type: "POST",
+      data: $form.serialize()
+    }).done(function(response){
+      $('input[type=text]').val("");
+    });
+
+});
+});
