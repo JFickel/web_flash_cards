@@ -3,3 +3,12 @@ Add your ActiveRecord models here.
 You can create them by being in the application root directory and running, e.g.,
 
 rake generate:model NAME=User
+rake generate:model NAME=Deck
+rake generate:model NAME=Card
+rake generate:model NAME=Round
+
+rake generate:migration NAME=create_users
+rake generate:migration NAME=create_decks
+rake generate:migration NAME=create_cards
+rake generate:migration NAME=create_rounds
+
