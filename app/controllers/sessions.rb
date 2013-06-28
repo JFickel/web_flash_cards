@@ -1,10 +1,10 @@
-get '/session/new' do
-  erb :'session/new'
+get '/sessions/new' do
+  erb :'sessions/new'
 end
 
-post '/session' do
+post '/sessions' do
   erb :'decks/index'
 end
 
-delete '/session' do
+delete '/sessions' do
 end
