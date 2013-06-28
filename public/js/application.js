@@ -1,18 +1,20 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
-});
+  // $('#create_event').on('click',function(e){
+  // 	  e.preventDefault();
+  //    $('form.event_form').slideDown();
+  //  });
 
-// User login
-$(document).ready(function () {
-
-	// $('#create_event').on('click',function(e){
- // 	  e.preventDefault();
- //    $('form.event_form').slideDown();
- //  });
+  $('#logout').on('click', function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: '/sessions',
+      type: $(this).data("method")
+    }).done(function(response) {
+      // whatever after logout
+      window.location = '/';
+    });
+  });
 
   $('div.login').on('submit',function(e){
     e.preventDefault();
@@ -25,6 +27,6 @@ $(document).ready(function () {
     }).done(function(response){
       $('input[type=text]').val("");
     });
+  });
 
-});
 });

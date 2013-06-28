@@ -17,7 +17,9 @@
 
   <title>Flash Cards</title>
   <h1>Flash Cards</h1>
-  <a id="logout" class="nav" href="/sessions">Logout</a>
+  <% if session[:user_id] %>
+    <a id="logout" class="nav" href="/sessions" data-method="delete">Logout</a>
+  <% end %>
 </head>
 
 <body>
