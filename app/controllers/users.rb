@@ -8,7 +8,7 @@ end
 
 
 post '/users' do
-  user = User.new(email: params[:email], password: params[:password])
+  user = User.new(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
   if user.save
     session[:user_id] =  user.id
     session.delete(:signup_errors)
