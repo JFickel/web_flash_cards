@@ -1,4 +1,9 @@
 <div class='container'>
   <h1>Decks</h1>
   <a class='profile' href='users/<%=session[:user_id]%>'>Profile</a>
+  <ul>
+    <% Deck.all.each do |deck| %>
+      <li><a href='decks/<%=deck.id%>'><%=deck.title%></a></li>
+    <% end %>
+  </ul>
 </div>
