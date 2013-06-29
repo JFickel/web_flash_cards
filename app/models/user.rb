@@ -1,5 +1,7 @@
 require 'bcrypt'
 class User < ActiveRecord::Base
+  has_many :rounds
+  
   validates :password, :confirmation => true
   # Remember to create a migration!
 
