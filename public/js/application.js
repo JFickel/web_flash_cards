@@ -1,18 +1,19 @@
 $(document).ready(function() {
 
-  // $('#create_event').on('click',function(e){
-  // 	  e.preventDefault();
-  //    $('form.event_form').slideDown();
-  //  });
 
-	// $('#create_event').on('click',function(e){
- // 	  e.preventDefault();
- //    $('form.event_form').slideDown();
- //  });
+  $('#guess').on('submit',function(e){
+    e.preventDefault();
+      $.ajax({
+        url: $(this).attr('action'),
+        type: $(this).attr('method'),
+        data: $(this).serialize()
+      }).done(function(response){
+        $('#card').replaceWith(response);
+      });
+  });
 
-  // $('span.class').on('keypress',function(e){
-  //   // e.preventDefault();
-  //   $form = $(this)
+
+
 
   $('#logout').on('click', function(e) {
     e.preventDefault();
@@ -25,17 +26,5 @@ $(document).ready(function() {
     });
   });
 
-  // $('div.login').on('submit',function(e){
-  //   e.preventDefault();
-  //   $form = $(this)
-  
-  //   $.ajax({
-  //     url: $form.attr('action'),
-  //     type: "POST",
-  //     data: $form.serialize()
-  //   }).done(function(response){
-  //     $('input[type=text]').val("");
-  //   });
-  // });
 
 });
