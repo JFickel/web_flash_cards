@@ -3,6 +3,7 @@ get '/rounds' do
 end
 
 post '/rounds' do 
+  @round = Round.create(guesses: 10, deck_id: params[:deck_id], user_id: session[:user_id])
   erb :'/rounds/show'
 end
 
