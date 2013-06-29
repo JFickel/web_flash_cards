@@ -2,7 +2,7 @@
   <h1><%=@deck.title%></h1>
   <h2><%=@deck.description%></h2>
   <form action='/rounds' method='post'>
-  <input type='hidden' name='deck_id' value="<%= @deck.id %>">
+  <input type='hidden' name='round[deck_id]' value="<%= @deck.id %>">
   <input type='submit' value='Start!'>
   </form>
 </div>
