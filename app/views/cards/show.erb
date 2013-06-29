@@ -1,4 +1,12 @@
+<% if params[:correct] == 'true' %>
+	<p>Correct</p>
+<% else %>
+	<p>Wrong</p>
+<% end %>
+
 <p><%= @card.question %></p>
+
 <form method='post' action='/rounds/<%= params[:round_id] %>/cards/<%= @card.id %>'>
 	<input type="text" name="guess">
 </form>
+
