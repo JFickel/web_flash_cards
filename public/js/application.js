@@ -14,10 +14,9 @@ $(document).ready(function () {
  //    $('form.event_form').slideDown();
  //  });
 
-  $('div.login').on('submit',function(e){
-    e.preventDefault();
+  $('span.class').on('keypress',function(e){
+    // e.preventDefault();
     $form = $(this)
-  
     $.ajax({
       url: $form.attr('action'),
       type: "POST",
