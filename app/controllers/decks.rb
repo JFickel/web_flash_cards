@@ -9,5 +9,5 @@ end
 
 get '/decks/:id' do |id|
   @deck=Deck.find(id)
-  erb :'/deck/show'
+  erb :'/decks/show'
 end

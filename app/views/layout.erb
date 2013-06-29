@@ -15,8 +15,13 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>Flash Cards</title>
+  <h1>Flash Cards</h1>
+  <% if session[:user_id] %>
+    <a id="logout" class="nav" href="/sessions" data-method="delete">Logout</a>
+  <% end %>
 </head>
+
 <body>
   <%= yield %>
 </body>
