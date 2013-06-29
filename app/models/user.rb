@@ -1,9 +1,8 @@
 require 'bcrypt'
 class User < ActiveRecord::Base
-  has_many :rounds
   
+  has_many :rounds
   validates :password, :confirmation => true
-  # Remember to create a migration!
 
   def password=(new_password)
     self.password_hash = BCrypt::Password.create(new_password)

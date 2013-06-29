@@ -1,7 +1,9 @@
 class Card < ActiveRecord::Base
+	
 	belongs_to :deck
+
   def guess_correct?(guess)
-    guess == @answer
+    guess == self.answer
   end
-  # Remember to create a migration!
+  
 end
