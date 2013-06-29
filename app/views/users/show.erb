@@ -1,2 +1,14 @@
 <div class ='container'>
-
+  <h1><%= @user.email %></h1>
+  <ol>
+  <% @user.rounds.each do |round| %>
+    <li>
+    Deck: <%= round.deck.title %>
+    <br>
+    Correct Guesses: <%= round.correct_guesses %>
+    <br>
+    Incorrect Guesses: <%= round.incorrect_guesses %>
+    </li>
+    <% end %>
+    </ol>
+</div>
