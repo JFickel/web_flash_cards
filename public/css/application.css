@@ -1,9 +1,137 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 400px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  
 }
+
+#head{
+	position:relative;
+}
+
+#answer{
+	padding:20px;
+	margin:10px;
+	border-radius:8px;
+	text-align: center;
+}
+
+#wrong_credentials{
+	display:none;
+}
+
+div.question{
+	background-color: #dbf5f3;
+	padding:20px;
+	margin:10px;
+	border-radius:8px;
+	height:90px;
+	color: #504a46;
+	text-align: center;
+
+}
+
+div.initial li{
+	padding:16px;
+	width:20%;
+	background-color: #ec715a;
+	margin:8px;
+	border-radius:8px;
+	text-align: center;
+}
+
+div.login{
+	background-color: #9bd4cd;
+	color:#fdf7da;
+	padding:26px;
+	border-radius:8px;
+}
+
+div.create_user{
+	background-color: #9bd4cd;
+	color:#fdf7da;
+	padding:26px;
+	border-radius:8px;
+}
+
+.create_user input{
+	padding:8px;
+	width:224px;
+	margin:4px;
+}
+
+#answer.true{
+	background-color: #9bd4cd;
+	color: #fdf7da;
+}
+
+#answer.false{
+	background-color: #ec715a;
+	color: #fdf7da;
+}
+
+
+#logout{
+	position:absolute;
+	top:16px;
+	right:36px;
+}
+
 th {
   text-align: left;
 }
+
+html {
+	background: #e9e8e3;
+}
+
+header{
+width:100px;
+}
+
+body{
+	 font-family: Helvetica Neue;
+}
+
+#guess input{
+	margin-top:54px;
+	background:#e6e6e6;
+	border:2px solid #d8d6cd;
+	width:96%;
+	padding:5px;
+}
+
+.login input{
+	padding:8px;
+	width:224px;
+	margin:4px;
+
+}
+
+label{
+	text-align: left;
+	display:inline-block;
+	width:88px;
+}
+
+h1{
+	color: #504a46;
+	font-weight:700;
+	padding:8px;
+	border-bottom: 1px dotted #504a46;
+	text-align: center
+}
+
+a{
+	text-decoration: none;
+	color:#504a46;
+}
+
+ul{
+	list-style-type: none;
+}
+a:hover{
+	color: #fdf7da;
+}
+
+

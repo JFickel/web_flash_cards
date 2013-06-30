@@ -8,6 +8,8 @@ end
 
 get '/users/:id' do |id|
   @user=User.find(id)
+  @correct_count = Guess.where(user_id: @user.id, correct:true).count
+  @incorrect_count = Guess.where(user_id: @user.id, correct:false).count
   erb :'/users/show'
 end
 

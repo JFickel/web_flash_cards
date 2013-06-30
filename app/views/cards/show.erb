@@ -1,15 +1,20 @@
 <div id='card'>
-	<p><%= @card.question %></p>
 
-	<form id='guess' method='post' action='/rounds/<%= params[:round_id] %>/cards/<%= @card.id %>'>
-		<input type="text" name="guess">
-	</form>
-
-	<div id='answer'>
-		<% if params[:correct] == 'true' %>
-	  <p>Correct</p>
-	  <% elsif params[:correct] == 'false' %>
-	  <p>Wrong</p>
-	  <% end %>
+	<div id='answer' class='<%= params[:correct] %>'>
+				<% if params[:correct] == 'true' %>
+			  Correct.
+			  <% elsif params[:correct] == 'false' %>
+			  Wrong.
+			  <% end %>
 	</div>
+
+	<div class='question'><%= @card.question %>
+		<div class='guess'>
+			<form id='guess' method='post' action='/rounds/<%= params[:round_id] %>/cards/<%= @card.id %>'>
+				<input type="text" name="guess">
+			</form>
+	</div>
+
 </div>
+	
+
